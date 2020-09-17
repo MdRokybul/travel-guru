@@ -1,0 +1,13 @@
+.navbarStyle img{
+    height: 60px;
+    color: white;
+}
+
+.navStyle a{
+    font-size: 19px;
+    margin: 0 10px;
+}
+.loginStyle{
+    background-color: goldenrod;
+    border-radius: 5px;
+}

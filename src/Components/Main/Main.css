@@ -1,0 +1,24 @@
+.boxStyle{
+    width: 219px;
+    height: 338px;
+    border: 4px solid red;
+    border-radius: 21px;
+    margin: 10px 40px;
+    
+}
+.coxsbazar{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/my-app-login-14a73.appspot.com/o/place%2Frsz_coxsbazar.png?alt=media&token=a822cbc4-6023-4499-b60d-35e7474438c8')
+}
+.sreemangal{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/my-app-login-14a73.appspot.com/o/place%2Frsz_sreemongol.png?alt=media&token=25267c56-7d87-4240-afb5-84d4c9a9b112')
+}
+.sundarban{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/my-app-login-14a73.appspot.com/o/place%2Frsz_sundorbon.png?alt=media&token=cd674435-ed82-4cdd-95a4-6e182dae5fd1');
+}
+.titleStyle{
+    margin-top: 280px;
+}
+.areaStyle{
+    width: 100%;
+    height: 100%;
+}
