@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
+import { UserContext } from '../../App';
 import './Header.css'
 
 const Header = () => {
+    const [user, setUser] = useContext(UserContext);
     return (
         <Container > 
             <Navbar bg="transparent" expand="xl">
@@ -21,7 +23,10 @@ const Header = () => {
                         <Nav.Link href="#">Destination</Nav.Link>
                         <Nav.Link href="#">Blog</Nav.Link>
                         <Nav.Link href="#">Contact</Nav.Link>
-                        <Nav.Link className="loginStyle" href="#link">Login</Nav.Link>
+                        {
+                            user.name ? <Nav.Link className="loginStyle" href="#link"> {user.name} </Nav.Link>
+                            : <Nav.Link className="loginStyle" href="/login">Login</Nav.Link>
+                        }
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
