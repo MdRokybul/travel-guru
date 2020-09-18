@@ -11,6 +11,7 @@ import Booking from './Components/Booking/Booking';
 import Search from './Components/Search/Search';
 import Login from './Components/Login/Login';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import NotMatch from './Components/NotMatch/NotMatch';
 
 export const PlaceName = createContext();
 export const StayingDate = createContext();
@@ -38,6 +39,9 @@ function App() {
                 </PrivateRoute>
                 <Route path="/login">
                   <Login></Login>
+                </Route>
+                <Route path="*">
+                  <NotMatch/>
                 </Route>
               </Switch>
             </Router>
