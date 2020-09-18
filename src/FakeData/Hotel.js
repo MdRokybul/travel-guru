@@ -1,7 +1,7 @@
 const hotelData = [
     {
         id: "1",
-        image: "https://firebasestorage.googleapis.com/v0/b/my-app-login-14a73.appspot.com/o/hotel%2Fcox1.jpg?alt=media&token=de89c129-3266-4bbb-8bfc-c3768e5f8e72",
+        image: "https://firebasestorage.googleapis.com/v0/b/mdrokybul-travel-guru.appspot.com/o/hotel%2Fcox1.jpg?alt=media&token=12599565-35ec-4f1e-975e-4f4aa08c8b26",
         title: "Laguna Beach Hotel & Resort",
         facility: "With Air Conditioning Kitchen",
         cancellation: "Cancellation flexibility available",
@@ -11,7 +11,7 @@ const hotelData = [
     },
     {
         id: "2",
-        image: "https://firebasestorage.googleapis.com/v0/b/my-app-login-14a73.appspot.com/o/hotel%2Fcox2.jpg?alt=media&token=ad8ff693-cb99-47b0-84c9-7d30e9d9461b",
+        image: "https://firebasestorage.googleapis.com/v0/b/mdrokybul-travel-guru.appspot.com/o/hotel%2Fcox2.jpg?alt=media&token=12693a97-bc85-4756-b113-406a4294a4fe",
         title: "Prime Park Hotel",
         facility: "With Air Conditioning Kitchen",
         cancellation: "Cancellation flexibility available",
@@ -21,7 +21,7 @@ const hotelData = [
     },
     {
         id: "3",
-        image: "https://firebasestorage.googleapis.com/v0/b/my-app-login-14a73.appspot.com/o/hotel%2Fcox3.jpg?alt=media&token=33ea1ff3-8a93-414e-9d6d-233c53cff3f1",
+        image: "https://firebasestorage.googleapis.com/v0/b/mdrokybul-travel-guru.appspot.com/o/hotel%2Fcox3.jpg?alt=media&token=b1ebc8b0-2181-4ca6-bb81-ed914b6022d4",
         title: "Hotel Sea Crown",
         facility: "With Air Conditioning Kitchen",
         cancellation: "Cancellation flexibility available",
@@ -31,7 +31,7 @@ const hotelData = [
     },
     {
         id: "4",
-        image: "https://firebasestorage.googleapis.com/v0/b/my-app-login-14a73.appspot.com/o/hotel%2Fcox4.jpg?alt=media&token=7ad4a6b2-661b-402b-9833-c89b56f520c9",
+        image: "https://firebasestorage.googleapis.com/v0/b/mdrokybul-travel-guru.appspot.com/o/hotel%2Fcox4.jpg?alt=media&token=828081be-0dba-4aba-a772-25f5be6cb2c5",
         title: "Long Beach Hotel",
         facility: "With Air Conditioning Kitchen",
         cancellation: "Cancellation flexibility available",
@@ -41,7 +41,7 @@ const hotelData = [
     },
     {
         id: "5",
-        image: "https://firebasestorage.googleapis.com/v0/b/my-app-login-14a73.appspot.com/o/hotel%2Fsree1.jpg?alt=media&token=ea220b0b-12b9-46e8-b100-8bb4dc44717e",
+        image: "https://firebasestorage.googleapis.com/v0/b/mdrokybul-travel-guru.appspot.com/o/hotel%2Fsree1.jpg?alt=media&token=882b10f5-5f12-4741-b82e-13b1dfbc392a",
         title: "ParadiseLodge Guest House",
         facility: "With Air Conditioning Kitchen",
         cancellation: "Cancellation flexibility available",
@@ -51,7 +51,7 @@ const hotelData = [
     },
     {
         id: "6",
-        image: "https://firebasestorage.googleapis.com/v0/b/my-app-login-14a73.appspot.com/o/hotel%2Fsree2.jpg?alt=media&token=8b7d1ce3-9b56-4d81-8c52-1a701738862c",
+        image: "https://firebasestorage.googleapis.com/v0/b/mdrokybul-travel-guru.appspot.com/o/hotel%2Fsree2.jpg?alt=media&token=3e862282-2bc1-48c3-ac4d-6325d738f860",
         title: "Balishira Resort Ltd",
         facility: "With Air Conditioning Kitchen",
         cancellation: "Cancellation flexibility available",
@@ -61,7 +61,7 @@ const hotelData = [
     },
     {
         id: "7",
-        image: "https://firebasestorage.googleapis.com/v0/b/my-app-login-14a73.appspot.com/o/hotel%2Fsree3.jpg?alt=media&token=83066282-ed51-4785-be79-6a0b2b39630f",
+        image: "https://firebasestorage.googleapis.com/v0/b/mdrokybul-travel-guru.appspot.com/o/hotel%2Fsree3.jpg?alt=media&token=94ee681a-fe24-438b-b557-d1522e5d96c4",
         title: "Sreemangal Inn Hotel & Restaurant",
         facility: "With Air Conditioning Kitchen",
         cancellation: "Cancellation flexibility available",
@@ -71,7 +71,7 @@ const hotelData = [
     },
     {
         id: "8",
-        image: "https://firebasestorage.googleapis.com/v0/b/my-app-login-14a73.appspot.com/o/hotel%2Fsree4.jpg?alt=media&token=1c7573ae-aad6-46d8-9802-477389f09d7d",
+        image: "https://firebasestorage.googleapis.com/v0/b/mdrokybul-travel-guru.appspot.com/o/hotel%2Fsree4.jpg?alt=media&token=90c487b2-5a85-48d7-bebe-9e0fd9514e0e",
         title: "Novem Eco Resort",
         facility: "With Air Conditioning Kitchen",
         cancellation: "Cancellation flexibility available",
@@ -81,7 +81,7 @@ const hotelData = [
     },
     {
         id: "9",
-        image: "https://firebasestorage.googleapis.com/v0/b/my-app-login-14a73.appspot.com/o/hotel%2Fsun1.jpg?alt=media&token=d874c9e2-bc94-4381-b422-b31f08d7a548",
+        image: "https://firebasestorage.googleapis.com/v0/b/mdrokybul-travel-guru.appspot.com/o/hotel%2Fsun1.jpg?alt=media&token=5b8a4707-3a8f-492e-af4f-a4e0e41533ce",
         title: "Ibiza The Fern Resort & Spa",
         facility: "With Air Conditioning Kitchen",
         cancellation: "Cancellation flexibility available",
@@ -91,7 +91,7 @@ const hotelData = [
     },
     {
         id: "10",
-        image: "https://firebasestorage.googleapis.com/v0/b/my-app-login-14a73.appspot.com/o/hotel%2Fsun2.jpg?alt=media&token=853ee56a-aae6-450e-a3d9-ee7c06fb4061",
+        image: "https://firebasestorage.googleapis.com/v0/b/mdrokybul-travel-guru.appspot.com/o/hotel%2Fsun2.jpg?alt=media&token=b40f6477-2571-46d1-92d1-1d4229981855",
         title: "OYO 11379 Jams Guest House",
         facility: "With Air Conditioning Kitchen",
         cancellation: "Cancellation flexibility available",
@@ -101,7 +101,7 @@ const hotelData = [
     },
     {
         id: "11",
-        image: "https://firebasestorage.googleapis.com/v0/b/my-app-login-14a73.appspot.com/o/hotel%2Fsun3.jpg?alt=media&token=51640008-541f-4cc8-9f9e-424304fab1a4",
+        image: "https://firebasestorage.googleapis.com/v0/b/mdrokybul-travel-guru.appspot.com/o/hotel%2Fsun3.jpg?alt=media&token=170c102d-269e-4ee1-9613-94c4e86be7b6",
         title: "Hotel Deepak",
         facility: "With Air Conditioning Kitchen",
         cancellation: "Cancellation flexibility available",
@@ -111,7 +111,7 @@ const hotelData = [
     },
     {
         id: "12",
-        image: "https://firebasestorage.googleapis.com/v0/b/my-app-login-14a73.appspot.com/o/hotel%2Fsun4.jpg?alt=media&token=fa7b0a56-308d-4e6b-8a41-292d01e7d3f5",
+        image: "https://firebasestorage.googleapis.com/v0/b/mdrokybul-travel-guru.appspot.com/o/hotel%2Fsun4.jpg?alt=media&token=cdbb7941-5595-4e99-90cd-01d4c8eb208e",
         title: "OYO 11530 Maa Tara Guest House",
         facility: "With Air Conditioning Kitchen",
         cancellation: "Cancellation flexibility available",

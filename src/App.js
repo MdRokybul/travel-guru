@@ -11,7 +11,6 @@ import Booking from './Components/Booking/Booking';
 import Search from './Components/Search/Search';
 import Login from './Components/Login/Login';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
-import Test from './Components/Test';
 
 export const PlaceName = createContext();
 export const StayingDate = createContext();
@@ -26,8 +25,8 @@ function App() {
       <PlaceName.Provider value={[place, setPlace]}>
         <StayingDate.Provider value={[date, setDate]}>
           <UserContext.Provider value={[user, setUser]}>
-          <Header></Header>
             <Router>
+            <Header></Header>
               <Switch>
                 <Route exact path="/" >
                     <Main></Main>
@@ -40,10 +39,6 @@ function App() {
                 </PrivateRoute>
                 <Route path="/login">
                   <Login></Login>
-                </Route>
-
-                <Route path="/test">
-                  <Test/>
                 </Route>
               </Switch>
             </Router>

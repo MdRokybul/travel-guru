@@ -38,9 +38,9 @@ const createAccountButton = {
 
 const Login = () => {
     const [user, setUser] = useContext(UserContext);
+    console.log(user)
     const history = useHistory();
     const location = useLocation();
-    console.log(user)
     const { from } = location.state || { from: { pathname: "/" } };
     
     if(firebase.apps.length === 0){
@@ -58,6 +58,29 @@ const Login = () => {
           });
     }
 
+    var fbProvider = new firebase.auth.FacebookAuthProvider();
+    const handleFacebookSign = () => {
+      
+      firebase.auth().signInWithPopup(fbProvider).then(function(result) {
+        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        console.log(result.user);
+        // ...
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        console.log(errorCode, errorMessage)
+        // ...
+      });
+    }
+
     const [loginUser, setLoginUser] = useState({
         isSignedIn: false,
         name: '',
@@ -66,9 +89,10 @@ const Login = () => {
         photo: ''
       })
 
-    const [newUser, setNewUser] = useState(false);
 
+    const [newUser, setNewUser] = useState(true);
     const handleSubmit = (e) => {
+      if(newUser && loginUser.email && loginUser.password){
         firebase.auth().createUserWithEmailAndPassword(loginUser.email, loginUser.password)
       .then(res => {
         const newUserInfo = {...loginUser};
@@ -81,17 +105,25 @@ const Login = () => {
         newUserInfo.error = err.message;
         newUserInfo.success = false;
         setLoginUser(newUserInfo);
+        console.log(newUserInfo.error);
       })
+    }
 
       if(!newUser && loginUser.email && loginUser.password){
         firebase.auth().signInWithEmailAndPassword(loginUser.email, loginUser.password)
         .then(res => {
           const newUserInfo = {...loginUser};
-          setLoginUser(newUserInfo)
+          setLoginUser(newUserInfo);
+          const {name, email} = newUserInfo;
+          const signInUser = {name, email};
+          setUser(signInUser);
         })
         .catch(err =>{
           const newUserInfo = {...loginUser};
           setLoginUser(newUserInfo);
+          var errorCode = err.code;
+            var errorMessage = err.message;
+            console.log(errorCode, errorMessage)
         })
       }
         e.preventDefault();
@@ -117,7 +149,7 @@ const Login = () => {
             <Row>
             <form onSubmit={handleSubmit} style={formStyle}>
                 {
-                    !newUser ? 
+                    newUser ? 
                     <div>
                         <h4>Create an Account</h4>
                 <label for="firstName">First Name</label>
@@ -131,11 +163,10 @@ const Login = () => {
                 <label for="firstName">Confirm Password</label>
                 <input style={inputStyle} type="password" name="password" required /> <br /><br/>
                 <input style={inputStyle} type="submit" style={createAccountButton} value="Create an Account" />
-                <p onClick={() => setNewUser(!newUser)}> Already have an account? 
-                    <span style={{color: 'red', cursor: 'pointer'}}> Login</span>
-                </p>
+                
                     </div>
-                    : <div>
+                  :
+                  <div>
                         <h4>Login</h4>
                 <label for="firstName">Email</label>
                 <input style={inputStyle} type="email" name="email" onBlur={handleBlur} required /> <br /><br />
@@ -144,15 +175,22 @@ const Login = () => {
                 <label for="firstName">Confirm Password</label>
                 <input style={inputStyle} type="password" name="password" required /> <br /><br/>
                 <input style={inputStyle} type="submit" style={createAccountButton} value="Create an Account" />
-                <p onClick={() => setNewUser(!newUser)}> Already have an account? 
-                    <span style={{color: 'red', cursor: 'pointer'}}> Login</span>
-                </p>
                     </div>
+                }
+                
+                {
+                  newUser ? <p onClick={() => setNewUser(!newUser)}> Already have an account? 
+                  <span style={{color: 'red', cursor: 'pointer'}}> Login</span></p>
+                  : <p onClick={() => setNewUser(!newUser)}> Don't have an account? 
+                  <span style={{color: 'red', cursor: 'pointer'}}> Create a new account</span></p>
                 }
             </form>
             </Row>
             <Row style={{width: '35%', margin:'0 auto'}}>
                 <button onClick={handleGoogleSign} style={submitButton}  >Continue with Google</button>
+            </Row>
+            <Row style={{width: '35%', margin:'0 auto'}}>
+                <button onClick={handleFacebookSign} style={submitButton}  >Continue with Facebook</button>
             </Row>
         </Container>
     );
