@@ -21,7 +21,7 @@ function App() {
   const [date, setDate] = useState(0);
   const [user, setUser] = useState({})
   return (
-    <div className="App">
+    <div className="App bgStyle">
       <PlaceName.Provider value={[place, setPlace]}>
         <StayingDate.Provider value={[date, setDate]}>
           <UserContext.Provider value={[user, setUser]}>

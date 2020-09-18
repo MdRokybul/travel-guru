@@ -19,14 +19,14 @@ const Header = () => {
                     <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                     </Form>
-                    <Nav className="ml-auto navStyle">
-                        <Link to="/">Home</Link>
-                        <Link to="/">Destination</Link>
-                        <Link to="#">Blog</Link>
-                        <Link to="#">Contact</Link>
+                    <Nav className="ml-auto navStyle" style={{margin: "auto 10px"}}>
+                        <Link className="navLinkStyle" style={{margin: "auto 10px"}} to="/">Home</Link>
+                        <Link className="navLinkStyle" style={{margin: "auto 10px"}} to="/search">Destination</Link>
+                        <Link className="navLinkStyle" style={{margin: "auto 10px"}} to="#">Blog</Link>
+                        <Link className="navLinkStyle" style={{margin: "auto 10px"}} to="#">Contact</Link>
                         {
-                            user.name ? <Link className="loginStyle" href="#link"> {user.name} </Link>
-                            : <Link className="loginStyle" href="/login">Login</Link>
+                            user.name ? <Link className="loginStyle navLinkStyle" href="#link"> {user.name} </Link>
+                            : <Link className="loginStyle navLinkStyle" to="/login">Login</Link>
                         }
                     </Nav>
                 </Navbar.Collapse>

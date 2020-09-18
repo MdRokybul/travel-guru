@@ -13,3 +13,6 @@
     padding: 10px 20px;
     color: black;
 }
+.navLinkStyle:hover {
+    text-decoration: none !important;
+}
